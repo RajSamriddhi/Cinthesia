@@ -1,0 +1,109 @@
+.quiz-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border-light);
+  width: 280px;
+  animation: floatIn 0.6s ease-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quiz-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-card__greeting {
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+.quiz-card__wave {
+  font-size: var(--text-lg);
+}
+
+.quiz-card__question {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-card__moods {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-card__mood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-1);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  border: 1.5px solid transparent;
+}
+
+.quiz-card__mood:hover {
+  background: var(--color-primary-bg);
+}
+
+.quiz-card__mood--active {
+  background: var(--color-primary-bg);
+  border-color: var(--color-primary-light);
+}
+
+.quiz-card__emoji {
+  font-size: var(--text-2xl);
+}
+
+.quiz-card__mood-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.quiz-card__divider {
+  height: 1px;
+  background: var(--color-border-light);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-card__info {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+.quiz-card__info strong {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+}
+
+.quiz-card__sparkle {
+  color: var(--color-primary);
+}
+
+.quiz-card__cta {
+  width: 100%;
+  justify-content: center;
+  font-size: var(--text-sm);
+  padding: 10px 20px;
+}

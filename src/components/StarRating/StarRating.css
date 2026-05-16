@@ -1,0 +1,9 @@
+.star-rating {
+  color: var(--color-star);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.star-rating__half {
+  opacity: 0.5;
+}
