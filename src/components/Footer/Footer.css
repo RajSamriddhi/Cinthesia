@@ -14,10 +14,13 @@
   display: inline-flex;
 }
 
-.footer__logo-img {
-  height: 42px;
-  width: auto;
-  object-fit: contain;
+.footer__logo-text {
+  font-family: 'Montserrat', 'Century Gothic', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a2724;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 
 .footer__tagline {

@@ -32,7 +32,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <Link to="/" className="navbar__brand">
-          <img src="/images/logo.png" alt="Cinthesia" className="navbar__logo-img" />
+          <span className="navbar__logo-text">CINTHESIA</span>
           <span className="navbar__tagline">Your glow, your journey.</span>
         </Link>
 
@@ -41,9 +41,8 @@ function Navbar() {
             <Link
               key={link.label}
               to={link.path}
-              className={`navbar__link ${
-                location.pathname === link.path ? 'navbar__link--active' : ''
-              }`}
+              className={`navbar__link ${location.pathname === link.path ? 'navbar__link--active' : ''
+                }`}
             >
               {link.label}
             </Link>
@@ -57,8 +56,8 @@ function Navbar() {
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
-          <button className="navbar__signin">Sign In</button>
-          <Link to="/" className="btn btn-primary navbar__cta">
+          <Link to="/auth" className="navbar__signin">Sign In</Link>
+          <Link to="/auth" className="btn btn-primary navbar__cta">
             Join Cinthesia <span>→</span>
           </Link>
         </div>

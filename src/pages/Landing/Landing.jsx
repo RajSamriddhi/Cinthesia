@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import QuizCard from '../../components/QuizCard/QuizCard'
 import './Landing.css'
 
 function Landing() {
+  const [quizDismissed, setQuizDismissed] = useState(false)
   const categories = [
     { name: 'Cleansers', emoji: '🧴' },
     { name: 'Serums', emoji: '💧' },
@@ -101,11 +103,13 @@ function Landing() {
             </div>
           </div>
 
-          <div className="hero__visual">
+          <div className={`hero__visual ${quizDismissed ? 'hero__visual--expanded' : ''}`}>
             <img src="/images/hero-products.png" alt="Cinthesia skincare products" className="hero__image" />
-            <div className="hero__quiz-card">
-              <QuizCard />
-            </div>
+            {!quizDismissed && (
+              <div className="hero__quiz-card">
+                <QuizCard onDismiss={() => setQuizDismissed(true)} />
+              </div>
+            )}
           </div>
         </div>
 

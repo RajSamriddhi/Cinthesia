@@ -6,6 +6,7 @@ import Landing from './pages/Landing/Landing'
 import Recommendation from './pages/Recommendation/Recommendation'
 import Community from './pages/Community/Community'
 import Reviews from './pages/Reviews/Reviews'
+import Auth from './pages/Auth/Auth'
 import './App.css'
 
 function ScrollToTop() {
@@ -17,19 +18,23 @@ function ScrollToTop() {
 }
 
 function App() {
+  const location = useLocation()
+  const isAuthPage = location.pathname === '/auth'
+
   return (
     <div className="app">
       <ScrollToTop />
-      <Navbar />
-      <main className="main-content">
+      {!isAuthPage && <Navbar />}
+      <main className={isAuthPage ? '' : 'main-content'}>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/routine" element={<Recommendation />} />
           <Route path="/community" element={<Community />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </main>
-      <Footer />
+      {!isAuthPage && <Footer />}
     </div>
   )
 }

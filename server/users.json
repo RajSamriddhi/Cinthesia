@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1779008109266,
+    "name": "Ananya Sharma",
+    "email": "ananya@test.com",
+    "password": "test123",
+    "createdAt": "2026-05-17T08:55:09.266Z"
+  },
+  {
+    "id": 1779008500304,
+    "name": "Sadiqua Parween",
+    "email": "sad@gmail.com",
+    "password": "sadiquA21",
+    "createdAt": "2026-05-17T09:01:40.304Z"
+  },
+  {
+    "id": 1779008577876,
+    "name": "SAMRIDDHI",
+    "email": "sam20@gmail.com",
+    "password": "samsad2021",
+    "createdAt": "2026-05-17T09:02:57.876Z"
+  }
+]

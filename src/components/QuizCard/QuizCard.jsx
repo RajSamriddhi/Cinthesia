@@ -14,7 +14,7 @@ function QuizCard() {
   return (
     <div className="quiz-card">
       <div className="quiz-card__header">
-        <span className="quiz-card__greeting">Good evening, Ananya</span>
+        <span className="quiz-card__greeting">Good evening</span>
         <span className="quiz-card__wave">👋</span>
       </div>
       <p className="quiz-card__question">How's your skin feeling today?</p>
